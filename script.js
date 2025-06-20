@@ -6,25 +6,71 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------- DATA --------
   const projects = [
     {
-      title: "Piano Ragtime Generator",
-      description: "A GPT-2 Transformer-based model that generates ragtime melodies.",
-      link: "https://garveyjli.github.io/ragtime-generator/",
-      tools: ["Python", "miditok", "transformer", "PyTorch"]
+      title: "GPT-2 Transformer Based Music Generation",
+      description: "Trained and fine-tuned a GPT-2 model to generate ragtime music using the REMI tokenizer. Scraped 425 MIDI files, conducted EDA, and encoded music as REMI token sequences.",
+      thumbnail: "assets/joplin.jpg",
+      link: "garveyjli.github.io/ragtime-generator/",
+      tools: ["Python", "Transformers", "PyTorch"],
+      date: "June 2025"
     },
     {
-      title: "Dino-Nuggetology",
-      description: "Created an anomaly detection model to classify malformed chicken nuggets using convolutional autoencoders.",
+      title: "Genetic Risk Prediction using Polygenic Risk Scores",
+      description: "Predicted relative genetic risk using PRS distributions and eQTL analysis. Built a pipeline for users to compute their own genetic risk scores.",
+      thumbnail: "assets/genetic_risk_thumbnail.png",
+      link: "",
+      tools: ["Python", "Statsmodels", "Plink2", "Bash"],
+      date: "September 2024 – March 2025"
+    },
+    {
+      title: "Dino-Nuggetology - DS3 DataHacks 2024 (1st Place Overall)",
+      description: "Created an anomaly detection model to classify malformed chicken nuggets using a convolutional autoencoder trained on Sobel-processed images.",
       thumbnail: "assets/dino_nugget_thumbnail.png",
       link: "https://devpost.com/software/dino-nuggetology",
-      tools: ["Python", "OpenCV", "Scikit-Image", "Autoencoder"]
+      tools: ["Python", "PyTorch", "Scikit-Image", "OpenCV", "PIL"],
+      date: "April 2024"
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive personal website using HTML/CSS/JS and GitHub Pages.",
-      link: "#",
-      tools: ["HTML", "CSS", "JavaScript"]
+      title: "MIDI Genre Classification - Project Lead",
+      description: "Led a 4-person team to predict song genres from MIDI files. Built and evaluated models like SVM and KNN on 40,000-song dataset matched with MusicBrainz genres.",
+      thumbnail: "assets/midi_genre_thumbnail.png",
+      link: "",
+      tools: ["Python", "Scikit-Learn", "Plotly", "h5py", "REST API"],
+      date: "October – December 2023"
+    },
+    {
+      title: "Signal/Image Processing Methods",
+      description: "Implemented Fourier transforms, filtering, edge detection, segmentation, optical flow, and epipolar rectification using NumPy and OpenCV.",
+      thumbnail: "assets/image_processing_thumbnail.png",
+      link: "",
+      tools: ["Python", "Numpy", "OpenCV", "Plotly"],
+      date: "September – December 2023"
+    },
+    {
+      title: "Google Local Data Restaurant Rating Predictor - Coauthor",
+      description: "Predicted user restaurant ratings using TF-IDF, SVD, and SGD classifiers on sparse Google Local dataset. Final F1 score: 0.630.",
+      thumbnail: "assets/restaurant_rating_thumbnail.png",
+      link: "http://bit.ly/rating-predictor",
+      tools: ["Python", "Numpy", "Scikit-Learn", "Plotly", "TensorFlow"],
+      date: "November – December 2023"
+    },
+    {
+      title: "Breast Cancer Tumor Classification Model - Coauthor",
+      description: "Built a logistic regression model with stratified k-fold CV to classify tumors as benign or malignant. Final F1 score: 0.976.",
+      thumbnail: "assets/tumor_classification_thumbnail.png",
+      link: "http://bit.ly/tumor-classifier",
+      tools: ["Python", "Pandas", "Statsmodels", "Plotly Express"],
+      date: "May – June 2023"
+    },
+    {
+      title: "Power Outage EDA and Cause Predictor - Coauthor",
+      description: "Performed EDA and built a decision tree model to classify power outage causes. Final F1 score after feature engineering: 0.637.",
+      thumbnail: "assets/power_outage_thumbnail.png",
+      link: "https://penelopeking.github.io/power-outage-model/",
+      tools: ["Python", "Pandas", "Scikit-Learn", "Plotly"],
+      date: "May – June 2023"
     }
   ];
+
 
   const experiences = [
     {
@@ -54,9 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
       el.innerHTML = `
       <a href="${p.link}" target="_blank" class="project-link-wrapper">
         <div class="project-inner">
-          ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.title} thumbnail" class="project-thumbnail">` : ''}
+          ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.title} thumbnail" class="project-thumbnail" align="middle">` : ''}
           <div class="project-content">
             <h3>${p.title}</h3>
+            <small>${p.date}</small>
             <p>${p.description}</p>
             <div class="tool-bubbles">
               ${p.tools.map(tool => `<span class="tool-bubble">${tool}</span>`).join('')}
