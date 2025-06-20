@@ -63,7 +63,7 @@ a:hover {
     color: white;
     text-decoration: none;
     text-align: left;
-    font-family: Ubuntu, 'Gill Sans MT';
+    font-family: Ubuntu, 'Calibri';
     font-size: 32px;
     margin-bottom: 10px;
     display: block;
@@ -71,7 +71,7 @@ a:hover {
 
 
 .section-header {
-    font-family:"Ubuntu", 'Gill Sans MT';
+    font-family:"Ubuntu", 'Calibri';
 }
 
 .sidebar {
