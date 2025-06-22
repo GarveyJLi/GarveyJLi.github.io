@@ -245,11 +245,11 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   pointer-events: none;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
   mix-blend-mode: overlay;
   transform: translate(-50%, -50%);
   z-index: 9999;
