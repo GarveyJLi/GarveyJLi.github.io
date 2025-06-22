@@ -287,3 +287,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateGlow();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".main-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".main-section");
+  const navLinks = document.querySelectorAll(".content-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+
+      if (entry.isIntersecting) {
+        // Add fade-in
+        entry.target.classList.add("visible");
+
+        // Highlight sidebar link
+        navLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  }, {
+    threshold: 0.4
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+

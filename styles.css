@@ -208,6 +208,18 @@ a:hover {
   background-color: #05386b;
 }
 
+.main-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.main-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .text-input {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -237,6 +249,14 @@ a:hover {
     0.25px 0.25px 0 #00bfff;
 }
 
+.content-section.active {
+  color: #00bfff;
+  text-shadow:
+    -0.25px -0.25px 0 #00bfff,
+     0.25px -0.25px 0 #00bfff,
+    -0.25px  0.25px 0 #00bfff,
+     0.25px  0.25px 0 #00bfff;
+}
 
 
 
@@ -254,4 +274,20 @@ a:hover {
   transform: translate(-50%, -50%);
   z-index: 9999;
   transition: background 0.3s ease;
+}
+
+.site-footnote {
+  text-align: center;
+  font-size: 0.5rem;
+  color: #ccc;
+  margin: 40px 0 20px;
+}
+
+.site-footnote a {
+  color: #00bfff;
+  text-decoration: underline;
+}
+
+.site-footnote a:hover {
+  color: #ffffff;
 }
