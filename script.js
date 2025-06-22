@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // Hide projects beyond the first 4 initially
       if (index >= 5) {
-        el.classList.add("hidden-project");
+        el.classList.add("hidden-project", "fade-in");
         el.style.display = "none";
       }
       container.appendChild(el);
@@ -174,11 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
       const hiddenProjects = document.querySelectorAll(".hidden-project");
       hiddenProjects.forEach(p => {
-        p.style.display = expanded ? "none" : "block";
+        if (expanded) {
+          p.classList.remove("visible");
+          setTimeout(() => p.style.display = "none", 300);
+        } else {
+          p.style.display = "block";
+          // Add fade-in on next tick
+          requestAnimationFrame(() => p.classList.add("visible"));
+        }
       });
       toggleBtn.textContent = expanded ? "Show More Projects" : "Show Fewer Projects";
       expanded = !expanded;
     });
+    
   }
 
   function renderExperiences() {
