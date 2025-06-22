@@ -24,6 +24,14 @@
                     <div class="profile-pic">
                         <img class="profile-pic-img" src="./assets/garvey_li_prof.jpeg">
                     </div>
+                </div>
+                <ul class="nav-list">
+                    <li><a class="content-section" href="#about-section">About</a></li>
+                    <li><a class="content-section" href="#experience-section">Experience</a></li>
+                    <li><a class="content-section" href="#projects-section">Projects</a></li>
+                    <li><a class="content-section" href="#contact-section">Contact</a></li>
+                </ul>
+                <footer class="footer">
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/GarveyLi" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
@@ -34,21 +42,20 @@
                         <a href="mailto:garvey.j.li@gmail.com" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
+                        <a href="assets/garvey_li_resume.pdf" target="_blank" aria-label="Resume">
+                            <i class="fa fa-address-card"></i>
+                        </a>
+
                     </div>
-                </div>
-                <ul class="nav-list">
-                    <li><a class="content-section" href="#about-section">About</a></li>
-                    <li><a class="content-section" href="#experience-section">Experience</a></li>
-                    <li><a class="content-section" href="#projects-section">Projects</a></li>
-                    <li><a class="content-section" href="#contact-section">Contact</a></li>
-                </ul>
+                    <p>© 2025 Garvey Li</p>
+                </footer>
             </section>
         </nav>
 
         <!-- Main Content -->
         <main class="content">
             <!-- About -->
-            <section id="about-section">
+            <section class="main-section" id="about-section">
                 <h2 class="section-header">About Me</h2>
                 <p>
                     Hi, I'm Garvey Li, a recent Data Science graduate from UC San Diego with a passion for machine
@@ -81,7 +88,7 @@
             </section>
             <hr>
             <!-- Experience -->
-            <section id="experience-section">
+            <section class="main-section" id="experience-section">
                 <h2 class="section-header">Experience</h2>
                 <div id="experience-container" class="experience-container">
                     <!-- Rendered by JS -->
@@ -89,23 +96,51 @@
             </section>
             <hr>
             <!-- Projects -->
-            <section id="projects-section">
+            <section class="main-section" id="projects-section">
                 <h2 class="section-header">Projects</h2>
                 <div id="projects-container" class="projects-container"></div>
                 <button id="toggle-projects-btn">Show More Projects</button>
 
             </section>
-
+            <hr>
             <!-- Contact -->
-            <section id="contact-section">
+            <section class="main-section" id="contact-section">
                 <h2 class="section-header">Contact</h2>
+
+                <div class = "form-container">
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mqabyezk" method="post">
+                        <fieldset class = "email-form" id="fs-frm-inputs">
+                            <div class = "form-element-div">
+                                <div class = "form">
+                                    <label for="display-name">Name</label>
+                                    <br>
+                                    <input class="text-input" type="text" name="name" placeholder = "Name" id="display-name"required>
+                                    <br>
+                                </div>
+                                <div class = "form">
+                                    <label for="email-address">Email Address</label>
+                                    <br>
+                                    <input class="text-input" type="email" name="_replyto" id="email-address" placeholder="your_email@domain.com" required>
+                                </div>
+                            </div>
+                            <div class = "form-element-div">
+                                <div class = 'form' id = 'message'>
+                                    <label for="message">Message</label>
+                                    <br>
+                                    <textarea rows="5" name="message" id="message" placeholder="Feel free to leave a message" required=""></textarea>
+                                    <input class="text-input" type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                                    <br>
+                                    <input class="submit-button" type="submit" value="Submit">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                    </form>
+                </div>
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer>
-            <p>© 2025 Garvey Li</p>
-        </footer>
+
     </div>
 </body>
 

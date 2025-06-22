@@ -1,3 +1,8 @@
+:root {
+  --footer-height: 50px;
+  --sidebar-width: 200px;
+}
+
 body {
   display: flex;
   margin: 0;
@@ -61,6 +66,21 @@ a:hover {
   font-size: 0.85rem;
 }
 
+.submit-button {
+  display: inline-block;
+  background-color: #05386b;
+  color: white;
+  padding: 6px 10px;
+  margin: 4px 4px 0 0;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.submit-button:hover {
+  background-color: #065aaf;
+  transition: 0.2s;
+}
+
 .header-name {
   color: white;
   text-decoration: none;
@@ -102,7 +122,7 @@ a:hover {
   top: 60px;
   bottom: 0;
   height: calc(100vh - 60px); 
-  width: 200px;
+  width: var(--sidebar-width);
   height: 100vh;
   background-color: #001f31;
   color: white;
@@ -120,29 +140,38 @@ a:hover {
 }
 
 .profile-pic-img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 
 .social-icons {
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* centers items horizontally */
   gap: 16px;
-  margin-top: 10px;
 }
+
 
 .social-icons a {
   color: white;
   font-size: 1.5rem;
   transition: color 0.3s;
+  margin-bottom: -10px;
 }
 
 .social-icons a:hover {
   color: #00bfff;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+
 
 .content {
   flex-grow: 1;
@@ -158,6 +187,22 @@ a:hover {
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
+}
+
+.email-form {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #05386b;
+}
+
+.text-input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 3px;
 }
 
 
