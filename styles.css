@@ -1,6 +1,6 @@
 :root {
   --footer-height: 50px;
-  --sidebar-width: 200px;
+  --sidebar-width: 280px;
 }
 
 body {
@@ -118,10 +118,8 @@ a:hover {
 
 .sidebar {
   position: fixed;
+  margin-top: 20%;
   left: 0;
-  top: 60px;
-  bottom: 0;
-  height: calc(100vh - 60px); 
   width: var(--sidebar-width);
   height: 100vh;
   background-color: #001f31;
@@ -129,8 +127,10 @@ a:hover {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;   
-  text-align: center;   
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10; /* Ensure it stays above content if needed */
 }
 
 .profile-pic {
@@ -175,7 +175,8 @@ a:hover {
 
 .content {
   flex-grow: 1;
-  margin-left: 220px;
+  margin-left: var(--sidebar-width);
+  max-width: 850px;
   padding: 20px;
 }
 
