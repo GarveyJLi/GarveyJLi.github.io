@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "CA-tching Fire",
-      description: "",
+      description: "Constructed an interactive geovisualization to highlight the differences of severity of wildfires in California.",
       thumbnail: "./assets/catching_fire.png",
       link: "https://garveyjli.github.io/CAtching-fire/",
       tools: ["Svelte", "D3", "HTML", "JavaScript"],
