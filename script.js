@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Genetic Risk Prediction using Polygenic Risk Scores",
       description: "Predicted relative genetic risk using PRS distributions and eQTL analysis. Built a pipeline for users to compute their own genetic risk scores.",
       thumbnail: "assets/genetic_risk_thumbnail.png",
-      link: "",
+      link: "https://y00628.github.io/equitable-prs-cardiovascular/",
       tools: ["Python", "Statsmodels", "Plink2", "Bash"],
       date: "September 2024 – March 2025"
     },
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "MIDI Genre Classification - Project Lead",
       description: "Led a 4-person team to predict song genres from MIDI files. Built and evaluated models like SVM and KNN on 40,000-song dataset matched with MusicBrainz genres.",
       thumbnail: "assets/midi_genre_thumbnail.png",
-      link: "",
       tools: ["Python", "Scikit-Learn", "Plotly", "h5py", "REST API"],
       date: "October – December 2023"
     },
@@ -41,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Signal/Image Processing Methods",
       description: "Implemented Fourier transforms, filtering, edge detection, segmentation, optical flow, and epipolar rectification using NumPy and OpenCV.",
       thumbnail: "assets/image_processing_thumbnail.png",
-      link: "",
       tools: ["Python", "Numpy", "OpenCV", "Plotly"],
       date: "September – December 2023"
     },
@@ -185,11 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
         link.classList.add("active");
       }
     });
-
-    // Optional: update right sidebar (disabled by default)
-    // if (sidebarMessages[currentSection]) {
-    //   updateSidebarContent(sidebarMessages[currentSection]);
-    // }
   }
 
   window.addEventListener("scroll", highlightCurrentSection);
