@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "GPT-2 Transformer Based Music Generation",
       description: "Trained and fine-tuned a GPT-2 model to generate single track ragtime music. Scraped 425 ragtime MIDI files, conducted EDA, and encoded music as REMI token sequences for training and generation.",
-      thumbnail: "assets/joplin.jpg",
+      thumbnail: "./assets/joplin.jpg",
       link: "garveyjli.github.io/ragtime-generator/",
       tools: ["Python", "Transformers", "PyTorch"],
       date: "June 2025",
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Genetic Risk Prediction using Polygenic Risk Scores",
       description: "Predicted relative genetic risk using PRS distributions and eQTL analysis. Built a pipeline for users to compute their own genetic risk scores.",
-      thumbnail: "assets/genetic_risk_thumbnail.png",
+      thumbnail: "./assets/genetic_risk_thumbnail.png",
       link: "https://y00628.github.io/equitable-prs-cardiovascular/",
       tools: ["Python", "Statsmodels", "Plink2", "Bash", "TWAS FUSION"],
       date: "September 2024 – March 2025",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Effectiveness of PRS models across populations for cardiovascular disease",
       description: "Investigated the generalizability of Polygenic Risk Score models across various populations for cardiovascular diseases. Various models trained on European data are compared against GWAS summary statistics for European, East Asian, African, and American populations. These models and association tests are done using the TWAS FUSION software.",
-      thumbnail: "assets/genetic_risk_thumbnail.png",
+      thumbnail: "./assets/genetic_risk_thumbnail.png",
       link: "https://y00628.github.io/equitable-prs-cardiovascular/",
       tools: ["Python", "Statsmodels", "Plink2", "Bash", "R", "TWAS FUSION"],
       date: "September 2024 – March 2025",
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Dino-Nuggetology - DS3 DataHacks 2024 (1st Place Overall)",
       description: "Created an anomaly detection model to classify malformed chicken nuggets using a convolutional autoencoder trained on Sobel-processed images.",
-      thumbnail: "assets/dino_nugget_thumbnail.png",
+      thumbnail: "./assets/dino_nugget_thumbnail.png",
       link: "https://devpost.com/software/dino-nuggetology",
       tools: ["Python", "PyTorch", "Scikit-Image", "OpenCV", "PIL"],
       date: "April 2024",
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "MIDI Genre Classification - Project Lead",
       description: "Led a 4-person team to predict song genres from MIDI files. Built and evaluated models like SVM and KNN on 40,000-song dataset matched with MusicBrainz genres.",
-      thumbnail: "assets/midi_genre_thumbnail.png",
+      thumbnail: "./assets/midi_genre_thumbnail.png",
       tools: ["Python", "Scikit-Learn", "Plotly", "h5py", "REST API"],
       date: "October – December 2023",
       include: false
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Signal/Image Processing Methods",
       description: "Implemented various image processing and computer vision methods, such as Fourier transforms, filtering, edge detection, segmentation, optical flow, and epipolar rectification using NumPy and OpenCV.",
-      thumbnail: "assets/computer_vision.JPG",
+      thumbnail: "./assets/computer_vision.JPG",
       tools: ["Python", "Numpy", "OpenCV", "Plotly"],
       date: "September – December 2023",
       include: true
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Google Local Data Restaurant Rating Predictor - Coauthor",
       description: "Predicted user restaurant ratings using TF-IDF, SVD, and SGD classifiers on sparse Google Local dataset. Final F1 score: 0.630.",
-      thumbnail: "assets/google_local.png",
+      thumbnail: "./assets/google_local.png",
       link: "http://bit.ly/rating-predictor",
       tools: ["Python", "Numpy", "Scikit-Learn", "Plotly", "TensorFlow"],
       date: "November – December 2023",
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Breast Cancer Tumor Classification Model - Coauthor",
       description: "Built a logistic regression model with stratified k-fold CV to classify tumors as benign or malignant based on characteristics of the cell nuclei in a breast mass. Final F1 score: 0.976.",
-      thumbnail: "assets/breast_cancer.png",
+      thumbnail: "./assets/breast_cancer.png",
       link: "http://bit.ly/tumor-classifier",
       tools: ["Python", "Pandas", "Statsmodels", "Plotly Express"],
       date: "May – June 2023",
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Power Outage EDA and Cause Predictor - Coauthor",
       description: "Performed EDA and built a decision tree model to classify power outage causes given features pertaining to time of year, location, and severity. Final F1 score after feature engineering: 0.637.",
-      thumbnail: "assets/power_outage.jpg",
+      thumbnail: "./assets/power_outage.jpg",
       link: "https://penelopeking.github.io/power-outage-model/",
       tools: ["Python", "Pandas", "Scikit-Learn", "Plotly"],
       date: "May – June 2023",
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "CA-tching Fire",
       description: "",
-      thumbnail: "assets/catching_fire.png",
+      thumbnail: "./assets/catching_fire.png",
       link: "https://garveyjli.github.io/CAtching-fire/",
       tools: ["Svelte", "D3", "HTML", "JavaScript"],
       date: "April 2023",
