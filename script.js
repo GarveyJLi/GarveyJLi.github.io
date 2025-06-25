@@ -103,14 +103,16 @@ document.addEventListener("DOMContentLoaded", () => {
       company: "USCD Health: Glass Lab",
       date: "March 2024–Present",
       link: "http://glasslab.ucsd.edu/",
-      description: "Explored new methods for representing complex sequence data to improve the performance of machine learning models, and used transformer-based models to detect patterns and investigated how their internal mechanisms (attention layers) capture relationships within the data."
+      description: "Explored new methods for representing complex sequence data to improve the performance of machine learning models, and used transformer-based models to detect patterns and investigated how their internal mechanisms (attention layers) capture relationships within the data.",
+      tools: ["Python", "Pytorch", "Matplotlib", "Bash", "R", "HOMER"]
     },
     {
       role: "Investment Management Data Science Intern",
       company: "Franklin Templeton",
       date: "June-August 2024",
       link: "https://www.franklintempleton.com/",
-      description: "Conducted research on financial data to analyze changes in security performance indicators caused by major economic events such as the 2008 recession and the COVID-19 pandemic."
+      description: "Conducted research on financial data to analyze changes in security performance indicators caused by major economic events such as the 2008 recession and the COVID-19 pandemic.",
+      tools: ["Python", "PySpark", "Matplotlib", "SQL", "Databricks", "Snowflake", "Sklearn", "Hyperopt", "Powerpoint"]
     },
   ];
 
@@ -119,16 +121,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("projects-container");
     const toggleBtn = document.getElementById("toggle-projects-btn");
     if (!container || !toggleBtn) return;
-  
+
     // Clear in case of re-render
     container.innerHTML = "";
 
     projects.forEach((p, index) => {
       if (p.include) {
-      const el = document.createElement("div");
-      el.className = "project-card";
-      if (p.link) {
-        el.innerHTML = `
+        const el = document.createElement("div");
+        el.className = "project-card";
+        if (p.link) {
+          el.innerHTML = `
         <a href="${p.link}" target="_blank" class="project-link-wrapper">
           <div class="project-inner">
             ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.title} thumbnail" class="project-thumbnail" align="middle">` : ''}
@@ -143,9 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </a>
       `;
-      }
-      else {
-        el.innerHTML = `
+        }
+        else {
+          el.innerHTML = `
           <div class="project-inner">
             ${p.thumbnail ? `<img src="${p.thumbnail}" alt="${p.title} thumbnail" class="project-thumbnail" align="middle">` : ''}
             <div class="project-content">
@@ -158,15 +160,15 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
     `;
+        }
+        // Hide projects beyond the first 4 initially
+        if (index >= 5) {
+          el.classList.add("hidden-project");
+          el.style.display = "none";
+        }
+        container.appendChild(el);
       }
-      // Hide projects beyond the first 4 initially
-      if (index >= 5) {
-        el.classList.add("hidden-project");
-        el.style.display = "none";
-      }
-      container.appendChild(el);
-      }
-      
+
     });
 
     // Toggle logic
@@ -184,30 +186,31 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderExperiences() {
     const container = document.getElementById("experience-container");
     if (!container) return;
-  
+
     experiences.forEach(e => {
       const el = document.createElement("div");
       el.className = "experience-card";
       el.innerHTML = `
-      <a href="${e.link}" target="_blank" class="project-link-wrapper">
-
-
-          <h3>${e.role} @ ${e.company}</h3>
-          <small>${e.date}</small>
-          <p>${e.description}</p>
-          ${
-            Array.isArray(e.tools) && e.tools.length > 0
-              ? `<div class="tool-bubbles">
-                  ${e.tools.map(tool => `<span class="tool-bubble">${tool}</span>`).join('')}
-                </div>`
-              : ''
+      <a href="${e.link}" target="_blank" class="experience-link-wrapper">
+        <div class="experience-inner">
+          <div class="experience-content">
+            <h3>${e.role} @ ${e.company}</h3>
+            <small>${e.date}</small>
+            <p>${e.description}</p>
+            ${Array.isArray(e.tools) && e.tools.length > 0
+            ? `<div class="tool-bubbles">
+                    ${e.tools.map(tool => `<span class="tool-bubble">${tool}</span>`).join('')}
+                  </div>`
+            : ''
           }
-        </a>
+          </div>
+        </div>
+      </a>
       `;
       container.appendChild(el);
     });
   }
-  
+
 
   renderProjects();
   renderExperiences();
@@ -255,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", highlightCurrentSection);
 
   // -------- DROPDOWN TOGGLE --------
-  window.toggleDropdown = function(dropdownId, button) {
+  window.toggleDropdown = function (dropdownId, button) {
     const dropdown = document.getElementById(dropdownId);
 
     if (!dropdown || !button) return;
