@@ -53,6 +53,15 @@ a:hover {
   min-width: 220px;
 }
 
+.experience-card {
+  margin-bottom: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+
 .tool-bubbles {
   margin-top: 8px;
 }
