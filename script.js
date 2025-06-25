@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "CA-tching Fire",
-      description: "",
+      description: "Constructed an interactive geovisualization to highlight the differences of severity of wildfires in California.",
       thumbnail: "./assets/catching_fire.png",
       link: "https://garveyjli.github.io/CAtching-fire/",
       tools: ["Svelte", "D3", "HTML", "JavaScript"],
@@ -161,14 +161,16 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
     `;
         }
-        // Hide projects beyond the first 4 initially
-        if (index >= 5) {
-          el.classList.add("hidden-project");
-          el.style.display = "none";
-        }
-        container.appendChild(el);
-      }
 
+
+      // Hide projects beyond the first 4 initially
+      if (index >= 5) {
+        el.classList.add("hidden-project", "fade-in");
+        el.style.display = "none";
+      }
+      container.appendChild(el);
+      }
+      
     });
 
     // Toggle logic
@@ -176,11 +178,19 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
       const hiddenProjects = document.querySelectorAll(".hidden-project");
       hiddenProjects.forEach(p => {
-        p.style.display = expanded ? "none" : "block";
+        if (expanded) {
+          p.classList.remove("visible");
+          setTimeout(() => p.style.display = "none", 300);
+        } else {
+          p.style.display = "block";
+          // Add fade-in on next tick
+          requestAnimationFrame(() => p.classList.add("visible"));
+        }
       });
       toggleBtn.textContent = expanded ? "Show More Projects" : "Show Fewer Projects";
       expanded = !expanded;
     });
+    
   }
 
   function renderExperiences() {
@@ -290,3 +300,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateGlow();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".main-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".main-section");
+  const navLinks = document.querySelectorAll(".content-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+
+      if (entry.isIntersecting) {
+        // Add fade-in
+        entry.target.classList.add("visible");
+
+        // Highlight sidebar link
+        navLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  }, {
+    threshold: 0.4
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
