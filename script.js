@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       role: "Bioinfomatics Research Assistant",
       company: "USCD Health: Glass Lab",
-      date: "March 2024–Present",
+      date: "March 2024–September 2025",
       link: "http://glasslab.ucsd.edu/",
       description: "Explored new methods for representing complex sequence data to improve the performance of machine learning models, and used transformer-based models to detect patterns and investigated how their internal mechanisms (attention layers) capture relationships within the data.",
       tools: ["Python", "Pytorch", "Matplotlib", "Bash", "R", "HOMER"]
