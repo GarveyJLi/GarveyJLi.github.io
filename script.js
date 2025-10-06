@@ -24,10 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
       include: false
     },
     {
+      title: "EEG-Based Detection of Cognitive States Using Decision Tree Models",
+      description: "Investigated EEG data to differentiate Alzheimer’s patients from healthy controls using spectral features.",
+      thumbnail: "./assets/alzheimers.png",
+      link: "https://y00628.github.io/equitable-prs-cardiovascular/",
+      tools: ["Python", "Pandas", "Scikit-Learn", "Scipy", "Matplotlib"],
+      date: "March 2025",
+      include: true
+    },
+    {
       title: "Effectiveness of PRS models across populations for cardiovascular disease",
       description: "Investigated the generalizability of Polygenic Risk Score models across various populations for cardiovascular diseases. Various models trained on European data are compared against GWAS summary statistics for European, East Asian, African, and American populations. These models and association tests are done using the TWAS FUSION software.",
       thumbnail: "./assets/genetic_risk_thumbnail.png",
-      link: "https://y00628.github.io/equitable-prs-cardiovascular/",
       tools: ["Python", "Statsmodels", "Plink2", "Bash", "R", "TWAS FUSION"],
       date: "September 2024 – March 2025",
       include: true
