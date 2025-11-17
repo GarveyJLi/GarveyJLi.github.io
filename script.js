@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "GPT-2 Transformer Based Music Generation",
       description: "Trained and fine-tuned a GPT-2 model to generate single track ragtime music. Scraped 425 ragtime MIDI files, conducted EDA, and encoded music as REMI token sequences for training and generation.",
       thumbnail: "./assets/joplin.jpg",
-      link: "garveyjli.github.io/ragtime-generator/",
+      link: "https://garveyjli.github.io/ragtime-generator/",
       tools: ["Python", "Transformers", "PyTorch"],
       date: "June 2025",
       include: true
